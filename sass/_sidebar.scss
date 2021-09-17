@@ -1,0 +1,42 @@
+.sidebar{
+    background-color: $color-primary;
+
+    grid-row: 1 / -1;
+    grid-column: side-start / side-end;
+
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: full-start / full-end;
+        grid-row: 1 / 2;    
+        align-items: center;  
+        justify-content: flex-end;  
+    }
+
+    &__icon{
+        border: none;
+        width: 5rem;
+        height: 2px;
+        color: #fff;
+        margin-top: 4rem;
+        @media only screen and (max-width: $bp-large) {
+            margin-top: 0; 
+            margin-right: 3rem;      
+        }
+    }
+    &__icon::before,
+    &__icon::after{
+        content: ' ';
+        display: block;
+        width: 5rem;
+        height: 2px;
+        background-color: currentColor;
+    }
+    &__icon::before{
+        transform: translateY(-1.2rem);
+    }
+    &__icon::after{
+        transform: translateY(1rem);
+    }
+}

@@ -1,0 +1,67 @@
+.homes{
+    margin: 8rem 0;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+
+    &__box{
+        background-color: $color-grey-light-1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &--img{
+            width: 100%;
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+        &--like{
+            margin: 1rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            fill: $color-primary;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            justify-self: end;
+        }
+        &--name{
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem 0;
+            font-size: 1.6rem;
+            color: #fff;
+            background-color: $color-secondary;
+            text-align: center;
+            grid-column: 1 / -1;
+
+            transform: translateY(-50%);
+        }
+        &--btn{
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__detail{
+        grid-column: 1 / -1;
+        color: $color-grey-dark-2;
+        padding: 3rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 3rem;
+        &--icon{
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: $color-primary;
+            margin-right: 2rem;
+        }
+        &--location,&--room,&--area,&--key{
+            display: flex;
+            align-items: center;
+        }
+
+    }
+}
